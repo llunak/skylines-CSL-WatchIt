@@ -147,7 +147,7 @@ namespace WatchIt
             });
 
             selected = ModConfig.Instance.UseClassicIcons;
-            group.AddCheckbox("Use Classic Icons - Requires Restart", selected, sel =>
+            group.AddCheckbox("Use Classic Icons", selected, sel =>
             {
                 ModConfig.Instance.UseClassicIcons = sel;
                 ModConfig.Instance.Save();
