@@ -146,6 +146,13 @@ namespace WatchIt
                 ModConfig.Instance.Save();
             });
 
+            selected = ModConfig.Instance.UseClassicIcons;
+            group.AddCheckbox("Use Classic Icons - Requires Restart", selected, sel =>
+            {
+                ModConfig.Instance.UseClassicIcons = sel;
+                ModConfig.Instance.Save();
+            });
+
             group = helper.AddGroup("Gauges");
 
             selected = ModConfig.Instance.ElectricityAvailability;
