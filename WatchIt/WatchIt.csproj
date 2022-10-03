@@ -30,20 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp.dll</HintPath>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>F:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="ColossalManaged, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\ColossalManaged.dll</HintPath>
+    <Reference Include="ColossalManaged">
+      <HintPath>F:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ColossalManaged.dll</HintPath>
     </Reference>
     <Reference Include="EManagersLib.API">
-      <HintPath>..\..\Assemblies\EManagersLib.API\1.0.0.0\EManagersLib.API.dll</HintPath>
+      <HintPath>F:\SteamLibrary\steamapps\workshop\content\255710\2696146165\EManagersLib.API.dll</HintPath>
     </Reference>
-    <Reference Include="ICities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\ICities.dll</HintPath>
+    <Reference Include="ICities">
+      <HintPath>F:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ICities.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,19 +48,18 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\UnityEngine.dll</HintPath>
+    <Reference Include="UnityEngine">
+      <HintPath>F:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\UnityEngine.UI.dll</HintPath>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>F:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration.cs" />
     <Compile Include="Managers\ProblemType.cs" />
     <Compile Include="Managers\ProblemManager.cs" />
+    <Compile Include="Panels\ProblemFilteringPanel.cs" />
     <Compile Include="Panels\WarningItem.cs" />
     <Compile Include="Panels\WarningPanel.cs" />
     <Compile Include="Panels\LimitItem.cs" />
@@ -90,82 +86,109 @@
     <EmbeddedResource Include="Icons\Heating.png" />
     <EmbeddedResource Include="Icons\Jail.png" />
     <EmbeddedResource Include="Icons\Sewage.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\GaugeGreen.png" />
     <EmbeddedResource Include="Icons\GaugeRed.png" />
     <EmbeddedResource Include="Icons\GaugeYellow.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Water.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\HighSchool.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\University.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Statistics.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Limits.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Drag.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\DragHover.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Crime.png" />
     <EmbeddedResource Include="Icons\Fire.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\RectHovered.png" />
     <EmbeddedResource Include="Icons\RectNormal.png" />
     <EmbeddedResource Include="Icons\RectPressed.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\CircleHovered.png" />
     <EmbeddedResource Include="Icons\CircleNormal.png" />
     <EmbeddedResource Include="Icons\CirclePressed.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Cemetery.png" />
     <EmbeddedResource Include="Icons\Health.png" />
     <EmbeddedResource Include="Icons\Landfill.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Traffic.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\FireDepartment.png" />
     <EmbeddedResource Include="Icons\PoliceDepartment.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Unemployment.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\GroundPollution.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Happiness.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\NoisePollution.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\DrinkingWaterPollution.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\CityAttractiveness.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Library.png" />
+    <EmbeddedResource Include="Icons\Problems.png" />
+    <EmbeddedResource Include="Icons\CemeteryClassic.png" />
+    <EmbeddedResource Include="Icons\CityAttractivenessClassic.png" />
+    <EmbeddedResource Include="Icons\CrematoriumClassic.png" />
+    <EmbeddedResource Include="Icons\CrimeClassic.png" />
+    <EmbeddedResource Include="Icons\DrinkingWaterPollutionClassic.png" />
+    <EmbeddedResource Include="Icons\ElectricityClassic.png" />
+    <EmbeddedResource Include="Icons\ElementarySchoolClassic.png" />
+    <EmbeddedResource Include="Icons\FireClassic.png" />
+    <EmbeddedResource Include="Icons\FireDepartmentClassic.png" />
+    <EmbeddedResource Include="Icons\GarbageClassic.png" />
+    <EmbeddedResource Include="Icons\GroundPollutionClassic.png" />
+    <EmbeddedResource Include="Icons\HappinessClassic.png" />
+    <EmbeddedResource Include="Icons\HealthcareClassic.png" />
+    <EmbeddedResource Include="Icons\HealthClassic.png" />
+    <EmbeddedResource Include="Icons\HeatingClassic.png" />
+    <EmbeddedResource Include="Icons\HighSchoolClassic.png" />
+    <EmbeddedResource Include="Icons\JailClassic.png" />
+    <EmbeddedResource Include="Icons\LandfillClassic.png" />
+    <EmbeddedResource Include="Icons\LibraryClassic.png" />
+    <EmbeddedResource Include="Icons\LimitsClassic.png" />
+    <EmbeddedResource Include="Icons\NoisePollutionClassic.png" />
+    <EmbeddedResource Include="Icons\PoliceDepartmentClassic.png" />
+    <EmbeddedResource Include="Icons\ProblemsClassic.png" />
+    <EmbeddedResource Include="Icons\SewageClassic.png" />
+    <EmbeddedResource Include="Icons\StatisticsClassic.png" />
+    <EmbeddedResource Include="Icons\TrafficClassic.png" />
+    <EmbeddedResource Include="Icons\UnemploymentClassic.png" />
+    <EmbeddedResource Include="Icons\UniversityClassic.png" />
+    <EmbeddedResource Include="Icons\WaterClassic.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Icons\Problems.png" />
+    <Content Include="Icons\CemeteryClassic.png" />
+    <Content Include="Icons\CircleHoveredClassic.png" />
+    <Content Include="Icons\CircleNormalClassic.png" />
+    <Content Include="Icons\CirclePressedClassic.png" />
+    <Content Include="Icons\CityAttractivenessClassic.png" />
+    <Content Include="Icons\CrematoriumClassic.png" />
+    <Content Include="Icons\CrimeClassic.png" />
+    <Content Include="Icons\DragClassic.png" />
+    <Content Include="Icons\DragHoverClassic.png" />
+    <Content Include="Icons\DrinkingWaterPollutionClassic.png" />
+    <Content Include="Icons\ElectricityClassic.png" />
+    <Content Include="Icons\ElementarySchoolClassic.png" />
+    <Content Include="Icons\FireClassic.png" />
+    <Content Include="Icons\FireDepartmentClassic.png" />
+    <Content Include="Icons\GarbageClassic.png" />
+    <Content Include="Icons\GaugeGreenClassic.png" />
+    <Content Include="Icons\GaugeRedClassic.png" />
+    <Content Include="Icons\GaugeYellowClassic.png" />
+    <Content Include="Icons\GroundPollutionClassic.png" />
+    <Content Include="Icons\HappinessClassic.png" />
+    <Content Include="Icons\HealthcareClassic.png" />
+    <Content Include="Icons\HealthClassic.png" />
+    <Content Include="Icons\HeatingClassic.png" />
+    <Content Include="Icons\HighSchoolClassic.png" />
+    <Content Include="Icons\JailClassic.png" />
+    <Content Include="Icons\LandfillClassic.png" />
+    <Content Include="Icons\LibraryClassic.png" />
+    <Content Include="Icons\LimitsClassic.png" />
+    <Content Include="Icons\NoisePollutionClassic.png" />
+    <Content Include="Icons\PoliceDepartmentClassic.png" />
+    <Content Include="Icons\ProblemsClassic.png" />
+    <Content Include="Icons\RectHoveredClassic.png" />
+    <Content Include="Icons\RectNormalClassic.png" />
+    <Content Include="Icons\RectPressedClassic.png" />
+    <Content Include="Icons\SewageClassic.png" />
+    <Content Include="Icons\StatisticsClassic.png" />
+    <Content Include="Icons\TrafficClassic.png" />
+    <Content Include="Icons\UnemploymentClassic.png" />
+    <Content Include="Icons\UniversityClassic.png" />
+    <Content Include="Icons\WaterClassic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
