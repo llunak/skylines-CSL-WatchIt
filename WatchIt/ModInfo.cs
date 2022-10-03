@@ -6,6 +6,7 @@ namespace WatchIt
 {
     public class ModInfo : IUserMod
     {
+    
         public string Name => "Watch It! Revisited";
         public string Description => "Watch status of the important capacities in the game.";
 
@@ -143,6 +144,13 @@ namespace WatchIt
             group.AddCheckbox("Show Statistics Button", selected, sel =>
             {
                 ModConfig.Instance.ShowStatisticsButton = sel;
+                ModConfig.Instance.Save();
+            });
+
+            selected = ModConfig.Instance.UseClassicIcons;
+            group.AddCheckbox("Use Classic ICONS", selected, sel =>
+            {
+                ModConfig.Instance.UseClassicIcons = sel;
                 ModConfig.Instance.Save();
             });
 
@@ -400,6 +408,8 @@ namespace WatchIt
                 ModConfig.Instance.ProblemMaxItems = result;
                 ModConfig.Instance.Save();
             });
+
+
         }
 
         private int GetSelectedOptionIndex(int[] option, int value)
