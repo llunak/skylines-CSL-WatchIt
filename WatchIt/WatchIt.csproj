@@ -33,12 +33,6 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>F:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="CitiesHarmony">
-      <HintPath>F:\SteamLibrary\steamapps\workshop\content\255710\2040656402\CitiesHarmony.dll</HintPath>
-    </Reference>
-    <Reference Include="CitiesHarmony.Harmony">
-      <HintPath>F:\SteamLibrary\steamapps\workshop\content\255710\2040656402\CitiesHarmony.Harmony.dll</HintPath>
-    </Reference>
     <Reference Include="ColossalManaged">
       <HintPath>F:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ColossalManaged.dll</HintPath>
     </Reference>
@@ -92,82 +86,67 @@
     <EmbeddedResource Include="Icons\Heating.png" />
     <EmbeddedResource Include="Icons\Jail.png" />
     <EmbeddedResource Include="Icons\Sewage.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\GaugeGreen.png" />
     <EmbeddedResource Include="Icons\GaugeRed.png" />
     <EmbeddedResource Include="Icons\GaugeYellow.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Water.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\HighSchool.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\University.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Statistics.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Limits.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Drag.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\DragHover.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Crime.png" />
     <EmbeddedResource Include="Icons\Fire.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\RectHovered.png" />
     <EmbeddedResource Include="Icons\RectNormal.png" />
     <EmbeddedResource Include="Icons\RectPressed.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\CircleHovered.png" />
     <EmbeddedResource Include="Icons\CircleNormal.png" />
     <EmbeddedResource Include="Icons\CirclePressed.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Cemetery.png" />
     <EmbeddedResource Include="Icons\Health.png" />
     <EmbeddedResource Include="Icons\Landfill.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Traffic.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\FireDepartment.png" />
     <EmbeddedResource Include="Icons\PoliceDepartment.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Unemployment.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\GroundPollution.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Happiness.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\NoisePollution.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\DrinkingWaterPollution.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\CityAttractiveness.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Library.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Icons\Problems.png" />
+    <EmbeddedResource Include="Icons\CemeteryClassic.png" />
+    <EmbeddedResource Include="Icons\CityAttractivenessClassic.png" />
+    <EmbeddedResource Include="Icons\CrematoriumClassic.png" />
+    <EmbeddedResource Include="Icons\CrimeClassic.png" />
+    <EmbeddedResource Include="Icons\DrinkingWaterPollutionClassic.png" />
+    <EmbeddedResource Include="Icons\ElectricityClassic.png" />
+    <EmbeddedResource Include="Icons\ElementarySchoolClassic.png" />
+    <EmbeddedResource Include="Icons\FireClassic.png" />
+    <EmbeddedResource Include="Icons\FireDepartmentClassic.png" />
+    <EmbeddedResource Include="Icons\GarbageClassic.png" />
+    <EmbeddedResource Include="Icons\GroundPollutionClassic.png" />
+    <EmbeddedResource Include="Icons\HappinessClassic.png" />
+    <EmbeddedResource Include="Icons\HealthcareClassic.png" />
+    <EmbeddedResource Include="Icons\HealthClassic.png" />
+    <EmbeddedResource Include="Icons\HeatingClassic.png" />
+    <EmbeddedResource Include="Icons\HighSchoolClassic.png" />
+    <EmbeddedResource Include="Icons\JailClassic.png" />
+    <EmbeddedResource Include="Icons\LandfillClassic.png" />
+    <EmbeddedResource Include="Icons\LibraryClassic.png" />
+    <EmbeddedResource Include="Icons\LimitsClassic.png" />
+    <EmbeddedResource Include="Icons\NoisePollutionClassic.png" />
+    <EmbeddedResource Include="Icons\PoliceDepartmentClassic.png" />
+    <EmbeddedResource Include="Icons\ProblemsClassic.png" />
+    <EmbeddedResource Include="Icons\SewageClassic.png" />
+    <EmbeddedResource Include="Icons\StatisticsClassic.png" />
+    <EmbeddedResource Include="Icons\TrafficClassic.png" />
+    <EmbeddedResource Include="Icons\UnemploymentClassic.png" />
+    <EmbeddedResource Include="Icons\UniversityClassic.png" />
+    <EmbeddedResource Include="Icons\WaterClassic.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icons\CemeteryClassic.png" />

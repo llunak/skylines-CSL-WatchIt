@@ -23,6 +23,9 @@ namespace WatchIt.Panels
 
         private List<GaugeItem> _gauges;
 
+        
+    
+
         public override void Awake()
         {
             base.Awake();
@@ -156,59 +159,10 @@ namespace WatchIt.Panels
         {
             try
             {
-                string[] spriteNames = {};
                 if (_watchItAtlas == null)
                 {
-                    if (ModConfig.Instance.UseClassicIcons)
-                    {
-                        spriteNames = new string[]
-                        {
-                            "CircleNormalClassic",
-                            "CircleHoveredClassic",
-                            "CirclePressedClassic",
-                            "RectNormalClassic",
-                            "RectHoveredClassic",
-                            "RectPressedClassic",
-                            "DragClassic",
-                            "DragHoverClassic",
-                            "GaugeGreenClassic",
-                            "GaugeYellowClassic",
-                            "GaugeRedClassic",
-                            "ElectricityClassic",
-                            "WaterClassic",
-                            "SewageClassic",
-                            "GarbageClassic",
-                            "ElementarySchoolClassic",
-                            "HighSchoolClassic",
-                            "UniversityClassic",
-                            "HealthcareClassic",
-                            "CrematoriumClassic",
-                            "FireDepartmentClassic",
-                            "PoliceDepartmentClassic",
-                            "JailClassic",
-                            "HeatingClassic",
-                            "LandfillClassic",
-                            "LibraryClassic",
-                            "CemeteryClassic",
-                            "TrafficClassic",
-                            "GroundPollutionClassic",
-                            "DrinkingWaterPollutionClassic",
-                            "NoisePollutionClassic",
-                            "FireClassic",
-                            "CrimeClassic",
-                            "UnemploymentClassic",
-                            "HealthClassic",
-                            "CityAttractivenessClassic",
-                            "HappinessClassic",
-                            "StatisticsClassic",
-                            "LimitsClassic",
-                            "ProblemsClassic"
-                        };
-                    }
-                    else
-                    {
-                        spriteNames = new string[] 
-                        {
+                    string[] spriteNames = new string[]
+                         {
                             "CircleNormal",
                             "CircleHovered",
                             "CirclePressed",
@@ -221,40 +175,68 @@ namespace WatchIt.Panels
                             "GaugeYellow",
                             "GaugeRed",
                             "Electricity",
+                            "ElectricityClassic",
                             "Water",
+                            "WaterClassic",
                             "Sewage",
+                            "SewageClassic",
                             "Garbage",
+                            "GarbageClassic",
                             "ElementarySchool",
+                            "ElementarySchoolClassic",
                             "HighSchool",
+                            "HighSchoolClassic",
                             "University",
+                            "UniversityClassic",
                             "Healthcare",
+                            "HealthcareClassic",
                             "Crematorium",
+                            "CrematoriumClassic",
                             "FireDepartment",
+                            "FireDepartmentClassic",
                             "PoliceDepartment",
+                            "PoliceDepartmentClassic",
                             "Jail",
+                            "JailClassic",
                             "Heating",
+                            "HeatingClassic",
                             "Landfill",
+                            "LandfillClassic",
                             "Library",
+                            "LibraryClassic",
                             "Cemetery",
+                            "CemeteryClassic",
                             "Traffic",
+                            "TrafficClassic",
                             "GroundPollution",
+                            "GroundPollutionClassic",
                             "DrinkingWaterPollution",
+                            "DrinkingWaterPollutionClassic",
                             "NoisePollution",
+                            "NoisePollutionClassic",
                             "Fire",
+                            "FireClassic",
                             "Crime",
+                            "CrimeClassic",
                             "Unemployment",
+                            "UnemploymentClassic",
                             "Health",
+                            "HealthClassic",
                             "CityAttractiveness",
+                            "CityAttractivenessClassic",
                             "Happiness",
+                            "HappinessClassic",
                             "Statistics",
+                            "StatisticsClassic",
                             "Limits",
+                            "LimitsClassic",
+                            "ProblemsClassic",
                             "Problems"
-                            };
-                        }
-                    }
+                         };
+                    
+                    _watchItAtlas = ResourceLoader.CreateTextureAtlas("WatchItAtlas", spriteNames, "WatchIt.Icons.");
+                }
 
-                _watchItAtlas = ResourceLoader.CreateTextureAtlas("WatchItAtlas", spriteNames, "WatchIt.Icons.");
-                
                 return _watchItAtlas;
             }
             catch (Exception e)
@@ -384,107 +366,107 @@ namespace WatchIt.Panels
 
                 if (ModConfig.Instance.ElectricityAvailability)
                 {
-                    _gauges.Add(CreateGauge("Electricity", GaugeItem.GaugeType.Aspect, "Electricity", "Electricity Availability"));
+                    _gauges.Add(CreateGauge("Electricity", GaugeItem.GaugeType.Aspect, GetSpriteName("Electricity"), "Electricity Availability"));
                 }
                 if (ModConfig.Instance.WaterAvailability)
                 {
-                    _gauges.Add(CreateGauge("Water", GaugeItem.GaugeType.Aspect, "Water", "Water Availability"));
+                    _gauges.Add(CreateGauge("Water", GaugeItem.GaugeType.Aspect, GetSpriteName("Water"), "Water Availability"));
                 }
                 if (ModConfig.Instance.SewageAvailability)
                 {
-                    _gauges.Add(CreateGauge("Sewage", GaugeItem.GaugeType.Aspect, "Sewage", "Sewage Availability"));
+                    _gauges.Add(CreateGauge("Sewage", GaugeItem.GaugeType.Aspect, GetSpriteName("Sewage"), "Sewage Availability"));
                 }
                 if (ModConfig.Instance.GarbageAvailability)
                 {
-                    _gauges.Add(CreateGauge("Garbage", GaugeItem.GaugeType.Aspect, "Garbage", "Garbage Availability"));
+                    _gauges.Add(CreateGauge("Garbage", GaugeItem.GaugeType.Aspect, GetSpriteName("Garbage"), "Garbage Availability"));
                 }
                 if (ModConfig.Instance.ElementarySchoolAvailability)
                 {
-                    _gauges.Add(CreateGauge("ElementarySchool", GaugeItem.GaugeType.Aspect, "ElementarySchool", "Elementary School Availability"));
+                    _gauges.Add(CreateGauge("ElementarySchool", GaugeItem.GaugeType.Aspect, GetSpriteName("ElementarySchool"), "Elementary School Availability"));
                 }
                 if (ModConfig.Instance.HighSchoolAvailability)
                 {
-                    _gauges.Add(CreateGauge("HighSchool", GaugeItem.GaugeType.Aspect, "HighSchool", "High School Availability"));
+                    _gauges.Add(CreateGauge("HighSchool", GaugeItem.GaugeType.Aspect, GetSpriteName("HighSchool"), "High School Availability"));
                 }
                 if (ModConfig.Instance.UniversityAvailability)
                 {
-                    _gauges.Add(CreateGauge("University", GaugeItem.GaugeType.Aspect, "University", "University Availability"));
+                    _gauges.Add(CreateGauge("University", GaugeItem.GaugeType.Aspect, GetSpriteName("University"), "University Availability"));
                 }
                 if (ModConfig.Instance.HealthcareAvailability)
                 {
-                    _gauges.Add(CreateGauge("Healthcare", GaugeItem.GaugeType.Aspect, "Healthcare", "Healthcare Availability"));
+                    _gauges.Add(CreateGauge("Healthcare", GaugeItem.GaugeType.Aspect, GetSpriteName("Healthcare"), "Healthcare Availability"));
                 }
                 if (ModConfig.Instance.CrematoriumAvailability)
                 {
-                    _gauges.Add(CreateGauge("Crematorium", GaugeItem.GaugeType.Aspect, "Crematorium", "Crematorium Availability"));
+                    _gauges.Add(CreateGauge("Crematorium", GaugeItem.GaugeType.Aspect, GetSpriteName("Crematorium"), "Crematorium Availability"));
                 }
                 if (ModConfig.Instance.FireDepartmentAvailability)
                 {
-                    _gauges.Add(CreateGauge("FireDepartment", GaugeItem.GaugeType.Aspect, "FireDepartment", "Fire Department Availability"));
+                    _gauges.Add(CreateGauge("FireDepartment", GaugeItem.GaugeType.Aspect, GetSpriteName("FireDepartment"), "Fire Department Availability"));
                 }
                 if (ModConfig.Instance.PoliceDepartmentAvailability)
                 {
-                    _gauges.Add(CreateGauge("PoliceDepartment", GaugeItem.GaugeType.Aspect, "PoliceDepartment", "Police Department Availability"));
+                    _gauges.Add(CreateGauge("PoliceDepartment", GaugeItem.GaugeType.Aspect, GetSpriteName("PoliceDepartment"), "Police Department Availability"));
                 }
                 if (ModConfig.Instance.JailAvailability)
                 {
-                    _gauges.Add(CreateGauge("Jail", GaugeItem.GaugeType.Aspect, "Jail", "Jail Availability"));
+                    _gauges.Add(CreateGauge("Jail", GaugeItem.GaugeType.Aspect, GetSpriteName("Jail"), "Jail Availability"));
                 }
                 if (ModConfig.Instance.HeatingAvailability)
                 {
-                    _gauges.Add(CreateGauge("Heating", GaugeItem.GaugeType.Aspect, "Heating", "Heating Availability"));
+                    _gauges.Add(CreateGauge("Heating", GaugeItem.GaugeType.Aspect, GetSpriteName("Heating"), "Heating Availability"));
                 }
                 if (ModConfig.Instance.LandfillUsage)
                 {
-                    _gauges.Add(CreateGauge("Landfill", GaugeItem.GaugeType.Pillar, "Landfill", "Landfill Usage"));
+                    _gauges.Add(CreateGauge("Landfill", GaugeItem.GaugeType.Pillar, GetSpriteName("Landfill"), "Landfill Usage"));
                 }
                 if (ModConfig.Instance.LibraryUsage)
                 {
-                    _gauges.Add(CreateGauge("Library", GaugeItem.GaugeType.Pillar, "Library", "Library Usage"));
+                    _gauges.Add(CreateGauge("Library", GaugeItem.GaugeType.Pillar, GetSpriteName("Library"), "Library Usage"));
                 }
                 if (ModConfig.Instance.CemeteryUsage)
                 {
-                    _gauges.Add(CreateGauge("Cemetery", GaugeItem.GaugeType.Pillar, "Cemetery", "Cemetery Usage"));
+                    _gauges.Add(CreateGauge("Cemetery", GaugeItem.GaugeType.Pillar, GetSpriteName("Cemetery"), "Cemetery Usage"));
                 }
                 if (ModConfig.Instance.TrafficFlow)
                 {
-                    _gauges.Add(CreateGauge("Traffic", GaugeItem.GaugeType.Pillar, "Traffic", "Traffic Flow"));
+                    _gauges.Add(CreateGauge("Traffic", GaugeItem.GaugeType.Pillar, GetSpriteName("Traffic"), "Traffic Flow"));
                 }
                 if (ModConfig.Instance.GroundPollution)
                 {
-                    _gauges.Add(CreateGauge("GroundPollution", GaugeItem.GaugeType.Pillar, "GroundPollution", "Ground Pollution"));
+                    _gauges.Add(CreateGauge("GroundPollution", GaugeItem.GaugeType.Pillar, GetSpriteName("GroundPollution"), "Ground Pollution"));
                 }
                 if (ModConfig.Instance.DrinkingWaterPollution)
                 {
-                    _gauges.Add(CreateGauge("DrinkingWaterPollution", GaugeItem.GaugeType.Pillar, "DrinkingWaterPollution", "Drinking Water Pollution"));
+                    _gauges.Add(CreateGauge("DrinkingWaterPollution", GaugeItem.GaugeType.Pillar, GetSpriteName("DrinkingWaterPollution"), "Drinking Water Pollution"));
                 }
                 if (ModConfig.Instance.NoisePollution)
                 {
-                    _gauges.Add(CreateGauge("NoisePollution", GaugeItem.GaugeType.Pillar, "NoisePollution", "Noise Pollution"));
+                    _gauges.Add(CreateGauge("NoisePollution", GaugeItem.GaugeType.Pillar, GetSpriteName("NoisePollution"), "Noise Pollution"));
                 }
                 if (ModConfig.Instance.FireHazard)
                 {
-                    _gauges.Add(CreateGauge("Fire", GaugeItem.GaugeType.Pillar, "Fire", "Fire Hazard"));
+                    _gauges.Add(CreateGauge("Fire", GaugeItem.GaugeType.Pillar, GetSpriteName("Fire"), "Fire Hazard"));
                 }
                 if (ModConfig.Instance.CrimeRate)
                 {
-                    _gauges.Add(CreateGauge("Crime", GaugeItem.GaugeType.Pillar, "Crime", "Crime Rate"));
+                    _gauges.Add(CreateGauge("Crime", GaugeItem.GaugeType.Pillar, GetSpriteName("Crime"), "Crime Rate"));
                 }
                 if (ModConfig.Instance.UnemploymentRate)
                 {
-                    _gauges.Add(CreateGauge("Unemployment", GaugeItem.GaugeType.Pillar, "Unemployment", "Unemployment Rate"));
+                    _gauges.Add(CreateGauge("Unemployment", GaugeItem.GaugeType.Pillar, GetSpriteName("Unemployment"), "Unemployment Rate"));
                 }
                 if (ModConfig.Instance.HealthAverage)
                 {
-                    _gauges.Add(CreateGauge("Health", GaugeItem.GaugeType.Pillar, "Health", "Health Average"));
+                    _gauges.Add(CreateGauge("Health", GaugeItem.GaugeType.Pillar, GetSpriteName("Health"), "Health Average"));
                 }
                 if (ModConfig.Instance.CityAttractiveness)
                 {
-                    _gauges.Add(CreateGauge("CityAttractiveness", GaugeItem.GaugeType.Pillar, "CityAttractiveness", "City Attractiveness"));
+                    _gauges.Add(CreateGauge("CityAttractiveness", GaugeItem.GaugeType.Pillar, GetSpriteName("CityAttractiveness"), "City Attractiveness"));
                 }
                 if (ModConfig.Instance.Happiness)
                 {
-                    _gauges.Add(CreateGauge("Happiness", GaugeItem.GaugeType.Pillar, "Happiness", "Happiness"));
+                    _gauges.Add(CreateGauge("Happiness", GaugeItem.GaugeType.Pillar, GetSpriteName("Happiness"), "Happiness"));
                 }
 
                 int buttonIndex = _gauges.Count;
@@ -514,10 +496,10 @@ namespace WatchIt.Panels
                     }
 
                     _limitsButton.foregroundSpriteMode = UIForegroundSpriteMode.Stretch;
-                    _limitsButton.normalFgSprite = "Limits";
-                    _limitsButton.hoveredFgSprite = "Limits";
-                    _limitsButton.pressedFgSprite = "Limits";
-                    _limitsButton.disabledFgSprite = "Limits";
+                    _limitsButton.normalFgSprite = GetSpriteName("Limits");
+                    _limitsButton.hoveredFgSprite = GetSpriteName("Limits");
+                    _limitsButton.pressedFgSprite = GetSpriteName("Limits");
+                    _limitsButton.disabledFgSprite = GetSpriteName("Limits");
 
                     _limitsButton.eventClicked += (component, eventParam) =>
                     {
@@ -558,10 +540,10 @@ namespace WatchIt.Panels
                     }
 
                     _problemsButton.foregroundSpriteMode = UIForegroundSpriteMode.Stretch;
-                    _problemsButton.normalFgSprite = "Problems";
-                    _problemsButton.hoveredFgSprite = "Problems";
-                    _problemsButton.pressedFgSprite = "Problems";
-                    _problemsButton.disabledFgSprite = "Problems";
+                    _problemsButton.normalFgSprite = GetSpriteName("Problems");
+                    _problemsButton.hoveredFgSprite = GetSpriteName("Problems");
+                    _problemsButton.pressedFgSprite = GetSpriteName("Problems");
+                    _problemsButton.disabledFgSprite = GetSpriteName("Problems");
 
                     _problemsButton.eventClicked += (component, eventParam) =>
                     {
@@ -602,10 +584,10 @@ namespace WatchIt.Panels
                     }
 
                     _statisticsButton.foregroundSpriteMode = UIForegroundSpriteMode.Stretch;
-                    _statisticsButton.normalFgSprite = "Statistics";
-                    _statisticsButton.hoveredFgSprite = "Statistics";
-                    _statisticsButton.pressedFgSprite = "Statistics";
-                    _limitsButton.disabledFgSprite = "Statistics";
+                    _statisticsButton.normalFgSprite = GetSpriteName("Statistics");
+                    _statisticsButton.hoveredFgSprite = GetSpriteName("Statistics");
+                    _statisticsButton.pressedFgSprite = GetSpriteName("Statistics");
+                    _limitsButton.disabledFgSprite = GetSpriteName("Statistics");
 
                     _statisticsButton.eventClicked += (component, eventParam) =>
                     {
@@ -662,6 +644,13 @@ namespace WatchIt.Panels
             {
                 Debug.Log("[Watch It!] GaugePanel:RefreshGauges -> Exception: " + e.Message);
             }
+        }
+
+        private string GetSpriteName(string guageName)
+        {
+            if (ModConfig.Instance.UseClassicIcons)
+                guageName += "Classic";
+            return guageName;
         }
     }
 }
