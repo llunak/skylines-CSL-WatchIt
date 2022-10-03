@@ -59,6 +59,7 @@
     <Compile Include="Configuration.cs" />
     <Compile Include="Managers\ProblemType.cs" />
     <Compile Include="Managers\ProblemManager.cs" />
+    <Compile Include="Panels\ProblemFilteringPanel.cs" />
     <Compile Include="Panels\WarningItem.cs" />
     <Compile Include="Panels\WarningPanel.cs" />
     <Compile Include="Panels\LimitItem.cs" />
@@ -146,6 +147,48 @@
     <EmbeddedResource Include="Icons\UnemploymentClassic.png" />
     <EmbeddedResource Include="Icons\UniversityClassic.png" />
     <EmbeddedResource Include="Icons\WaterClassic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\CemeteryClassic.png" />
+    <Content Include="Icons\CircleHoveredClassic.png" />
+    <Content Include="Icons\CircleNormalClassic.png" />
+    <Content Include="Icons\CirclePressedClassic.png" />
+    <Content Include="Icons\CityAttractivenessClassic.png" />
+    <Content Include="Icons\CrematoriumClassic.png" />
+    <Content Include="Icons\CrimeClassic.png" />
+    <Content Include="Icons\DragClassic.png" />
+    <Content Include="Icons\DragHoverClassic.png" />
+    <Content Include="Icons\DrinkingWaterPollutionClassic.png" />
+    <Content Include="Icons\ElectricityClassic.png" />
+    <Content Include="Icons\ElementarySchoolClassic.png" />
+    <Content Include="Icons\FireClassic.png" />
+    <Content Include="Icons\FireDepartmentClassic.png" />
+    <Content Include="Icons\GarbageClassic.png" />
+    <Content Include="Icons\GaugeGreenClassic.png" />
+    <Content Include="Icons\GaugeRedClassic.png" />
+    <Content Include="Icons\GaugeYellowClassic.png" />
+    <Content Include="Icons\GroundPollutionClassic.png" />
+    <Content Include="Icons\HappinessClassic.png" />
+    <Content Include="Icons\HealthcareClassic.png" />
+    <Content Include="Icons\HealthClassic.png" />
+    <Content Include="Icons\HeatingClassic.png" />
+    <Content Include="Icons\HighSchoolClassic.png" />
+    <Content Include="Icons\JailClassic.png" />
+    <Content Include="Icons\LandfillClassic.png" />
+    <Content Include="Icons\LibraryClassic.png" />
+    <Content Include="Icons\LimitsClassic.png" />
+    <Content Include="Icons\NoisePollutionClassic.png" />
+    <Content Include="Icons\PoliceDepartmentClassic.png" />
+    <Content Include="Icons\ProblemsClassic.png" />
+    <Content Include="Icons\RectHoveredClassic.png" />
+    <Content Include="Icons\RectNormalClassic.png" />
+    <Content Include="Icons\RectPressedClassic.png" />
+    <Content Include="Icons\SewageClassic.png" />
+    <Content Include="Icons\StatisticsClassic.png" />
+    <Content Include="Icons\TrafficClassic.png" />
+    <Content Include="Icons\UnemploymentClassic.png" />
+    <Content Include="Icons\UniversityClassic.png" />
+    <Content Include="Icons\WaterClassic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

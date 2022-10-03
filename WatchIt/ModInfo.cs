@@ -6,6 +6,7 @@ namespace WatchIt
 {
     public class ModInfo : IUserMod
     {
+    
         public string Name => "Watch It! Revisited";
         public string Description => "Watch status of the important capacities in the game.";
 
@@ -407,6 +408,8 @@ namespace WatchIt
                 ModConfig.Instance.ProblemMaxItems = result;
                 ModConfig.Instance.Save();
             });
+
+
         }
 
         private int GetSelectedOptionIndex(int[] option, int value)
