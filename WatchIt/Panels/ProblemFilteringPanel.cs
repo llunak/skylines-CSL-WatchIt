@@ -10,9 +10,6 @@ namespace WatchIt.Panels
 {
     public class ProblemFilteringPanel : UIPanel
     {
-        private bool _initialized;
-        private float _timer;
-
         private UITextureAtlas _notificationsAtlas;
         private UILabel _title;
         private UIButton _close;
@@ -20,8 +17,6 @@ namespace WatchIt.Panels
 
         private UITabstrip _tabstrip;
         private UITabContainer _tabContainer;
-        private UIButton _templateButton;
-        private UIButton _problemFilteringButton;
 
         private UIPanel _problemFilteringPanel;
         private UIScrollablePanel _problemFilteringScrollablePanel;
@@ -114,10 +109,6 @@ namespace WatchIt.Panels
                 {
                     Destroy(_problemFilteringPanel.gameObject);
                 }
-                if (_templateButton != null)
-                {
-                    Destroy(_templateButton.gameObject);
-                }
                 if (_tabContainer != null)
                 {
                     Destroy(_tabContainer.gameObject);
@@ -173,24 +164,13 @@ namespace WatchIt.Panels
                 _close = UIUtils.CreateMenuPanelCloseButton(this);
                 _dragHandle = UIUtils.CreateMenuPanelDragHandle(this);
 
-                //_tabstrip = UIUtils.CreateTabStrip(this);
-                //_tabstrip.width = width - 40f;
-                //_tabstrip.relativePosition = new Vector3(20f, 50f);
-                //_tabstrip.eventSelectedIndexChanged += (UIComponent component, int value) =>
-                //{
-                //    RefreshProblems();
-                //};
+
 
                 _tabContainer = UIUtils.CreateTabContainer(this);
                 _tabContainer.width = width - 40f;
                 _tabContainer.height = 0f;
                 _tabContainer.relativePosition = new Vector3(20f, 85f);
 
-                _templateButton = UIUtils.CreateTabButton(this);
-
-                //_tabstrip.tabPages = _tabContainer;
-
-                UIPanel panel = null;
 
                              
                 _problemFilteringPanel = UIUtils.CreatePanel(this, "ProblemList");

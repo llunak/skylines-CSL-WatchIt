@@ -233,6 +233,8 @@ namespace WatchIt.Panels
                 {
 
                 }
+
+                _templateButton.isVisible = false;
                                
                 _problemPanel = UIUtils.CreatePanel(this, "ProblemList");
                 _problemPanel.width = width - 40f;
