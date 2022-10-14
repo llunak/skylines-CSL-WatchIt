@@ -3,6 +3,7 @@ using ColossalFramework.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using WatchIt.Managers;
 
@@ -15,7 +16,6 @@ namespace WatchIt.Panels
         private UIButton _close;
         private UIDragHandle _dragHandle;
 
-        private UITabstrip _tabstrip;
         private UITabContainer _tabContainer;
 
         private UIPanel _problemFilteringPanel;
@@ -69,16 +69,8 @@ namespace WatchIt.Panels
         public override void Update()
         {
             base.Update();
+            ForceUpdate();
 
-            try
-            {
-                UpdateProblemComparator();
-              
-            }
-            catch (Exception e)
-            {
-                Debug.Log("[Watch It!] ProblemFilteringPanel:Update -> Exception: " + e.Message);
-            }
         }
 
         public override void OnDestroy()
@@ -113,10 +105,6 @@ namespace WatchIt.Panels
                 {
                     Destroy(_tabContainer.gameObject);
                 }
-                if (_tabstrip != null)
-                {
-                    Destroy(_tabstrip.gameObject);
-                }
                 if (_dragHandle != null)
                 {
                     Destroy(_dragHandle.gameObject);
@@ -143,9 +131,18 @@ namespace WatchIt.Panels
                 Debug.Log("[Watch It!] ProblemFilteringPanel:OnDestroy -> Exception: " + e.Message);
             }
         }
-        public void ForceUpdateUI()
+
+        public void ForceUpdate()
         {
-            
+            try
+            {
+                UpdateProblemComparator();
+
+            }
+            catch (Exception e)
+            {
+                Debug.Log("[Watch It!] ProblemFilteringPanel:ForceUpdate -> Exception: " + e.Message);
+            }
         }
 
         private void CreateUI()
@@ -220,7 +217,7 @@ namespace WatchIt.Panels
                 }
                 for (int i = 0; i < _keyNotifications1.Length; i++)
                 {
-                    _checkboxes1[i] = UIUtils.CreateCheckBox(_problemFilteringScrollablePanel, _keyNotifications1[i].enumName);
+                    _checkboxes1[i] = CreateCheckBox(_problemFilteringScrollablePanel, _keyNotifications1[i].enumName);
                 }
 
 
@@ -231,7 +228,7 @@ namespace WatchIt.Panels
                 }
                 for(int i=0; i < _keyNotifications2.Length; i++)
                 {
-                    _checkboxes2[i] = UIUtils.CreateCheckBox(_problemFilteringScrollablePanel, _keyNotifications2[i].enumName);
+                    _checkboxes2[i] = CreateCheckBox(_problemFilteringScrollablePanel, _keyNotifications2[i].enumName);
                 }
                                
 
@@ -260,6 +257,21 @@ namespace WatchIt.Panels
                     _problemComparator |= _keyNotifications2[i].enumValue;
                 }
             }
+        }
+
+        private UICheckBox CreateCheckBox(UIComponent parent, string text)
+        {
+            UICheckBox checkBox = parent.AttachUIComponent(UITemplateManager.GetAsGameObject("OptionsCheckBoxTemplate")) as UICheckBox;
+
+            checkBox.text = text;
+            checkBox.isChecked = true;
+
+            checkBox.eventCheckChanged += (component, eventParam) =>
+            {
+                ForceUpdate();
+            };
+
+            return checkBox;
         }
 
     }
