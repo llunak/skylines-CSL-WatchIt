@@ -29,7 +29,7 @@ namespace WatchIt.Panels
         private UICheckBox[] _checkboxes1;
         private UICheckBox[] _checkboxes2;
 
-        public Notification.ProblemStruct _problemComparator;
+        public static Notification.ProblemStruct _problemComparator = Notification.ProblemStruct.All;
 
         private static readonly PositionData<Notification.Problem1>[] _keyNotifications1 = Utils.GetOrderedEnumData<Notification.Problem1>("Text");
         private static readonly PositionData<Notification.Problem2>[] _keyNotifications2 = Utils.GetOrderedEnumData<Notification.Problem2>("Text");
