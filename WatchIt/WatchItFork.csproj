@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputPath>..</OutputPath>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <AssemblyVersion>1.24.0.*</AssemblyVersion>
+    <AssemblyVersion>2025.0620.1</AssemblyVersion>
     <Deterministic>false</Deterministic>
     <TargetFramework>net35</TargetFramework>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
