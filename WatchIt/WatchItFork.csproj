@@ -193,7 +193,7 @@
     <Content Include="Icons\UniversityClassic.png" />
     <Content Include="Icons\WaterClassic.png" />
   </ItemGroup>
-  <PropertyGroup>
-    <PostBuildEvent>sh -c "rm -f /home/steam/.local/share/Steam/steamapps/common/Cities_Skylines/Files/Mods/CSL-WatchIt/WatchIt.dll; mkdir -p /home/steam/.local/share/Steam/steamapps/common/Cities_Skylines/Files/Mods/CSL-WatchIt/; cp WatchIt.dll /home/steam/.local/share/Steam/steamapps/common/Cities_Skylines/Files/Mods/CSL-WatchIt/; cp ../../../../EManagersLib.API.dll /home/steam/.local/share/Steam/steamapps/common/Cities_Skylines/Files/Mods/CSL-WatchIt/"</PostBuildEvent>
-  </PropertyGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="sh -c 'rm -rf &quot;/home/steam/.local/share/Colossal Order/Cities_Skylines/Addons/Mods/$(ProjectName)/*&quot;; mkdir -p &quot;/home/steam/.local/share/Colossal Order/Cities_Skylines/Addons/Mods/$(ProjectName)&quot;; cp &quot;$(TargetPath)&quot; &quot;/home/steam/.local/share/Colossal Order/Cities_Skylines/Addons/Mods/$(ProjectName)/&quot;;cp &quot;$(TargetDir)EManagersLib.API.dll&quot; &quot;/home/steam/.local/share/Colossal Order/Cities_Skylines/Addons/Mods/$(ProjectName)/&quot;'" />
+  </Target>
 </Project>
